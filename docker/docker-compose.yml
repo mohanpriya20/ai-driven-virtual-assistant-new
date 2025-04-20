@@ -1,0 +1,12 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: ../backend
+      dockerfile: ../docker/Dockerfile.backend
+    ports:
+      - "8000:8000"
+  ai:
+    build:
+      context: ../ai_engine
+      dockerfile: ../docker/Dockerfile.ai_engine
